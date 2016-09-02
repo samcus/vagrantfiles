@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/samcus/vagrantfile/issues"
   },
-  "homepage": "https://github.com/samcus/vagrantfile#readme"
+  "homepage": "https://github.com/samcus/vagrantfile#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
