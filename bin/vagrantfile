@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+var fs = require('fs'),
+app = require('../index'),
+program = require('commander');
+
+program
+  .version('0.0.1')
+  .option('-c, --configuration', 'node')
+  .parse(process.argv);
+
+if (program.configuration) app.create(program.rawArgs.splice(-1)[0]);

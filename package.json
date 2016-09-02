@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "NPM package to create preconfigured vagrantfiles",
   "main": "index.js",
+  "bin": {
+    "vagrantfile": "./bin/vagrantfile"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
