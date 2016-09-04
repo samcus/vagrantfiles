@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samcus/vagrantfile.git"
+    "url": "git+https://github.com/samcus/vagrantfiles.git"
   },
   "keywords": [
     "vagrant",
@@ -23,9 +23,9 @@
   "author": "Samuel Anthony Custer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samcus/vagrantfile/issues"
+    "url": "https://github.com/samcus/vagrantfiles/issues"
   },
-  "homepage": "https://github.com/samcus/vagrantfile#readme",
+  "homepage": "https://github.com/samcus/vagrantfiles#readme",
   "dependencies": {
     "commander": "^2.9.0"
   }
