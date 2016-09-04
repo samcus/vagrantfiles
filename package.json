@@ -4,7 +4,7 @@
   "description": "NPM package to create preconfigured vagrantfiles",
   "main": "index.js",
   "bin": {
-    "vagrantfile": "./bin/vagrantfiles"
+    "vagrantfiles": "./bin/vagrantfiles"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
