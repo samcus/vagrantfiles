@@ -1,6 +1,6 @@
 {
   "name": "vagrantfiles",
-  "version": "0.0.3b",
+  "version": "0.0.3i",
   "description": "NPM package to create preconfigured vagrantfiles",
   "main": "index.js",
   "bin": {
