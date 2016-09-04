@@ -26,9 +26,11 @@ vagrantfiles node
 ```js
 var vagrantfiles = require('vagrantfiles');
 vagrantfiles.create("node", function(err, success){
-  if(err) throw err;
-  if(success){
-    console.log(success); 
+  if(err) {
+    console.log(err);
+  }
+  if(success) {
+    console.log(success);
   }
 });
 ```
