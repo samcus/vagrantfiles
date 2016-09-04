@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 var fs = require('fs'),
+path = require('path'),
 app = require('../index'),
 program = require('commander');
+
+//console.log(path.resolve());
 
 program
   .version('0.0.1')
