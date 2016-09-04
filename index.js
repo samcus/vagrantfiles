@@ -14,7 +14,7 @@ program = require('commander');
 //console.log(1);
 //console.log(require('module'));
 //console.log(2);
-console.log(path.resolve(__filename,'../'));
+//console.log(path.resolve(__filename,'../'));
 var currentPath = path.resolve(__filename,'../');
 //console.log(__filename);
 //console.log(require('module')._cache);
