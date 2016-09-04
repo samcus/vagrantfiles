@@ -8,4 +8,6 @@ program
   .option('-c, --configuration', 'node')
   .parse(process.argv);
 
-if (program.configuration) app.create(program.rawArgs.splice(-1)[0]);
+if (program.configuration) app.create(program.rawArgs.splice(-1)[0],function(err,success){
+  if (err) throw err;
+});

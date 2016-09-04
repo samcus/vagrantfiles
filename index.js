@@ -16,7 +16,7 @@ module.exports = {
   checkSuccess: function(cb){
    if((bootstrapSuccess === true) && (vagrantfileSuccess === true)){
      //console.log("okaynow!");
-     return cb(null, 1);
+    return cb(null, 1);
    }
   },
   /**
