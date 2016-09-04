@@ -19,7 +19,7 @@ npm install --save vagrantfiles
 
 ##### Global Usage (First Navigate to Desired Directory)
 ```sh
-vagrantfiles node
+vagrantfiles -c node
 ```
 
 ##### Local Usage
