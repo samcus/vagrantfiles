@@ -43,7 +43,7 @@ module.exports = {
     });
   },
   copy: function(configuration, cb){
-    var vagrantfileRS = fs.createReadStream('vagrantfiles/'+configuration+'/Vagrantfile')
+    var vagrantfileRS = fs.createReadStream('./'+'vagrantfiles/'+configuration+'/Vagrantfile')
       .on('error',function(err){
         //throw "Vagrantfile Error: Vagrantfile Configuration Does Not Exist (Yet)"
         cb("Vagrantfile Error: Vagrantfile Configuration Does Not Exist (Yet)", null);
@@ -59,7 +59,7 @@ module.exports = {
           }
         });
       });
-    var bootstrapRS = fs.createReadStream('vagrantfiles/'+configuration+'/bootstrap.sh')
+    var bootstrapRS = fs.createReadStream('./'+'vagrantfiles/'+configuration+'/bootstrap.sh')
       .on('error',function(err){
         //throw "Vagrantfile Error: Vagrantfile Configuration Does Not Exist (Yet)"
         cb("Vagrantfile Error: Vagrantfile Configuration Does Not Exist (Yet)", null);
