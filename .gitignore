@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# Documentation
+docs
+
 # OSX
 .DS_Store
 

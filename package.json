@@ -7,7 +7,8 @@
     "vagrantfile": "./bin/vagrantfiles"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "./node_modules/.bin/jsdoc . --destination docs"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,8 @@
   "homepage": "https://github.com/samcus/vagrantfiles#readme",
   "dependencies": {
     "commander": "^2.9.0"
+  },
+  "devDependencies": {
+    "jsdom": "^9.5.0"
   }
 }

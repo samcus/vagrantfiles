@@ -2,14 +2,28 @@ var fs = require('fs'),
 program = require('commander');
 
 var errorPrefix = "Vagrantfile Error: ";
-
+/**
+ * Vagrantfiles Module
+ *
+ * @module index.js
+ */
 module.exports = {
+  /**
+   * Checks the status of the Vagrantfile configuration creation
+   * @param {Function} Callback
+   * @returns {Number}
+   */
   checkSuccess: function(cb){
    if((bootstrapSuccess === true) && (vagrantfileSuccess === true)){
-     cb(null, true);
-     //return success;
+     //console.log("okaynow!");
+     return cb(null, 1);
    }
   },
+  /**
+   * Request the creation of a Vagrantfile configuration
+   * @param {Object} Configuration
+   * @returns {Function}
+   */
   create: function(configuration, cb){
     that = this;
     vagrantfileSuccess = false;
@@ -19,10 +33,12 @@ module.exports = {
       cb("Configuration should be a string", null);
     }
     this.copy(configuration, function(err,success){
-      if (err) throw err;
+      if (err) cb(err,null)//;throw err;
       if (success){
         //console.log(success);
         cb(null,success);
+        //console.log(1);
+        //this.checkSuccess();
       }
     });
   },
@@ -33,14 +49,14 @@ module.exports = {
         cb("Vagrantfile Error: Vagrantfile Configuration Does Not Exist (Yet)", null);
       })
       .on('data',function(data){
-        //console.log(data.toString());
         fs.writeFile('Vagrantfile', data, function(err){
-          //if(err) throw err;
           if(err) cb("Could not write file", null);
-          vagrantfileSuccess = true;
-          that.checkSuccess(function(success){
-            if(success) cb(null, success)
-          });
+          else {
+            vagrantfileSuccess = true;
+            that.checkSuccess(function(){
+              cb(null, "Created Vagrantfile and Bootstrap Successfully");
+            });
+          }
         });
       });
     var bootstrapRS = fs.createReadStream('vagrantfiles/'+configuration+'/bootstrap.sh')
@@ -53,11 +69,13 @@ module.exports = {
         fs.writeFile('bootstrap.sh', data, function(err){
           //if(err) throw err;
           if (err) cb(err, null);
-          bootstrapSuccess = true;
-          that.checkSuccess(function(success){
-            if(success) cb(null, success)
-          });
+          else{
+            bootstrapSuccess = true;
+            that.checkSuccess(function(){
+              cb(null, "Created Vagrantfile and Bootstrap Successfully");
+            });
+          }
         });
       });
-  }
+    }
 };

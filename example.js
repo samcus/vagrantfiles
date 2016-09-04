@@ -1,8 +1,10 @@
 vagrantfiles = require('./index');
-
-//vagrantfiles.create(1);
+//console.log(2);
 vagrantfiles.create("node", function(err, success){
-  if(err) throw err;
-  if(success) console.log("Success!")
+  if(err) {
+    console.log(err);
+  }
+  if(success) {
+    console.log(success);
+  }
 });
-//vagrantfiles.bin();
