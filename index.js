@@ -2,27 +2,8 @@ var fs = require('fs'),
 path = require('path'),
 program = require('commander');
 
-//console.log(process.env.PATH)
-//console.log(path.resolve());
-//console.log(process.cwd());
-//console.log(process.env.PWD);
-//console.log(process.cwd());
-//console.log(require.resolve());
-//console.log(require('module')._resolveFilename('vagrantfiles'))
-//console.log(require('module')._resolveLookupPaths('vagrantfiles'));
-//console.log(require('module')._resolveLookupPaths('vagrantfiles')[0,1]);
-//console.log(1);
-//console.log(require('module'));
-//console.log(2);
-//console.log(path.resolve(__filename,'../'));
 var currentPath = path.resolve(__filename,'../');
-//console.log(__filename);
-//console.log(require('module')._cache);
-//console.log(require('module'));
-//console.log(path.resolve());
-//console.log(require('.'));
-//console.log(path.resolve('index.js'))
-// console.log($PATH);
+
 var errorPrefix = "Vagrantfile Error: ";
 /**
  * Vagrantfiles Module
